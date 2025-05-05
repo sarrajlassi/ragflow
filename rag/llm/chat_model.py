@@ -481,6 +481,7 @@ class AzureChat(Base):
         super().__init__(key, model_name, kwargs["base_url"])
         self.client = AzureOpenAI(api_key=api_key, azure_endpoint=kwargs["base_url"], api_version=api_version)
         self.model_name = model_name
+        self.max_retries = max_retries
 
 
 class BaiChuanChat(Base):
